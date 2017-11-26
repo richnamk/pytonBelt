@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Show User</title>
+</head>
+
+<body>
+	<a href="{% url 'dashboard' %}">Dashboard</a>
+	<a href="{% url 'logout' %}">Log out</a>
+	<h3>Posts by: {{ user.name }}</h3>
+<h3>Count: {{count}}</h3>
+	{% for quote in quotes %}
+	<hr>
+	<p>{{quote.quoted_by}}</p>
+	<p>{{quote.message}}</p>
+	{% endfor %}
+
+</body>
+
+</html>
